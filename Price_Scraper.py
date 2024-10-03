@@ -58,7 +58,7 @@ def button_pressed():
 
         textbox.place(x=300, y=100)
 
-        textbox.insert(f"Nazwa produkt: {title} \nCena produktu to: {price} zł\nZdjecia:{str(jpg_src)}")  # insert at line 0 character 0
+        textbox.insert('0.0', f'Nazwa produkt: {title} \nCena produktu to: {price} zł\nZdjecia:{str(jpg_src)}')  # insert at line 0 character 0
 
 
     else:

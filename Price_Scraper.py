@@ -62,7 +62,7 @@ def button_pressed():
 
 
     else:
-        print("Nie udało się pobrać ceny oraz tytułu produktu.")
+        print("Nie znaleziono produktu")
 
 
 

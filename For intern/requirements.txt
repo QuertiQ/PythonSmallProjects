@@ -1,0 +1,4 @@
+beautifulsoup4==4.12.2
+newspaper3k==0.2.8
+selenium==4.10.0
+babel==2.12.1

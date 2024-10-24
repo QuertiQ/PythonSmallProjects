@@ -31,7 +31,7 @@ def extract_content_with_selenium(url):
         print('Page loaded')
         # Extract the HTML content of the page
         html = driver.page_source
-        time.sleep(2)  # Wait for 2 seconds to ensure the page is fully loaded
+        time.sleep(5)  # Wait for 5 seconds to ensure the page is fully loaded
         return html
     finally:
         # Close the browser once done
@@ -50,8 +50,8 @@ def content_scrap_selenium(url):
 def clean_body_content(url):
     # Parse the content using BeautifulSoup
     soup = BeautifulSoup(content_scrap_selenium(url), "html.parser")
-    # Extract the first 15 elements of specific tags (h2, h3, p, strong)
-    elements = soup.find_all(['h2', 'h3', 'p', 'strong'])[:15]
+    # Extract the first 30 elements of specific tags (h2, h3, p, strong)
+    elements = soup.find_all(['h2', 'h3', 'p', 'strong'])[:30]
 
     # Initialize the content with a header
     content = "Zawartość artykułu\n"
@@ -119,7 +119,7 @@ def scrapingdata(url):
         category = "Nie znaleziono"
 
     # Return the articles metadata as a formatted string
-    return f'Tytuł: {title}\nKategoria: {category}\nData wydania: {str(date)}\n'
+    return f'\nTytuł: {title}\nKategoria: {category}\nData wydania: {str(date)}\n'
 
 # Main function to scrape and save multiple articles
 def main(urls):
